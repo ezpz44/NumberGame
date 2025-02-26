@@ -15,23 +15,32 @@ Installation
 No installation is required. Ensure you have Python 3 installed on your system.
 
 How to Run
-	1.	Open a terminal or command prompt.
-	2.	Run the script using:
+	
+1.  Open a terminal or command prompt.
+	
+2.  Run the script using:
 
-python number_game.py
+python ProjectProgram.py
 
+3.  Follow instructions in terminal
 
-	3.	Follow the on-screen instructions to play.
-
+ 
 Usage Example
 
 Guess the Number Game
+
 This Program randomly generates a number between 1 and 10 that you will have to guess.
+
 You will have unlimited attempts.
+
 Type 'yes' to play or 'no' to exit the program: yes
+
 Guess a number between 1 and 10: 5
+
 Oops! Your guess was too low. Try again.
+
 Guess a number between 1 and 10: 7
+
 Congratulations! You guessed the correct number.
 
 Requirements
