@@ -1,32 +1,38 @@
-import random #imported module for randint to generate random numbers
+import random 
 
-#display title function, game description, and user ready check
 def display_title():
     print("Guess the Number Game")
     print("This Program randomly generates a number between 1 and 10 that you will have to guess.")
     print("You will have unlimited attempts.")
-    ready_check = ""  #initialize ready_check variable
-
-    #while loop that allows user to select if they want to play
+    ready_check = ""  
+    
     while ready_check != "yes" and ready_check != "no":
         ready_check = input("Type 'yes' to play or 'no' to exit the program: ")
-        if ready_check == "no": #ends program if no is entered
+        if ready_check == "no": 
             print("Goodbye!")
             return
-        elif ready_check == "yes": #calls play_game function if yes is entered
+        elif ready_check == "yes": 
             play_game()
-        else: #error handling to let user know input was invalid and only allow yes/no
+        else: 
             print("That is not a valid input")
+"""
+Function starts by printing game title and description.
 
-#function for playing of game
+ready_check variable is initialized and then used to determine if 
+user is ready to play by accepting yes/no input.
+
+while loop compares ready_check input and closes if no, calls play_game function 
+if yes and for everything else returns an error statement.
+"""
+
+
 def play_game():
-    secret_number = random.randint(1, 10) #generate random number using randint
-    user_guess = 0 #initialize user variable
+    secret_number = random.randint(1, 10) 
+    user_guess = 0 
 
-    #while loop that compares value of user_guess to secret_number with feedback
     while user_guess != secret_number:
         user_guess = int(input("Guess a number between 1 and 10: "))
-        if user_guess == secret_number: #when correct number is guessed main is called
+        if user_guess == secret_number: 
             print("Congratulations! You guessed the correct number.")
             return main()
         elif user_guess < secret_number: 
@@ -35,8 +41,14 @@ def play_game():
         else:
             print("Oops! Your guess was too high. Try again.")
             continue
+"""
+secret_number uses randint method to generate a random number and user_guess initialized.
+
+while loop compares value of user_guess and secret_number after user inputs their guess.
+If correct, main() is called to start the game again. 
+Feedback given for guesses to high and too low.
+"""
     
-#main function that calls display_title
 def main():
     display_title()
 main()
